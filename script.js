@@ -13,10 +13,12 @@ function createDivs(divNum) {
     }
 }
 
- createDivs(8);
+let divNum = 8;
+createDivs(divNum);
 
-let pixels = document.querySelectorAll('pixel');
-let button = document.querySelectorAll('#submit');
+
+let pixels = document.querySelectorAll('.pixel');
+let submit = document.querySelector('#submit');
 
 container.addEventListener('mouseover', event => {
     if (event.target.classList.contains('pixel')&& event.buttons == 1)
@@ -24,3 +26,14 @@ container.addEventListener('mouseover', event => {
             event.target.style.opacity = "50%";
         }  
     })
+
+    submit.addEventListener('click', () => {
+        container.innerHTML = "";
+        divNum = document.getElementById('entry').value;
+        console.log(divNum);
+        createDivs(divNum);
+    });
+
+    
+
+    
