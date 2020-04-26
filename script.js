@@ -1,21 +1,22 @@
 let container = document.querySelector('#gridbox');
 
 function createDivs(divNum) {
-    let dimension = 360/divNum;
+    let dimension = 100/divNum;
     for (let i = 0; i < divNum*divNum; i ++) {
         let newDiv = document.createElement('div');
         console.log('loop is running');
         newDiv.classList.add('pixel');
-        newDiv.style.height = dimension + "px";
-        newDiv.style.width = dimension + "px";
+        newDiv.style.height = dimension + "%";
+        newDiv.style.width = dimension + "%";
         container.append(newDiv);
         
     }
 }
 
- createDivs(16);
+ createDivs(8);
 
 let pixels = document.querySelectorAll('pixel');
+let button = document.querySelectorAll('#submit');
 
 container.addEventListener('mouseover', event => {
     if (event.target.classList.contains('pixel')&& event.buttons == 1)
