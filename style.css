@@ -9,8 +9,8 @@ body {
 }
 
 #whitespace {
-    height: 350px;
-    width: 350px;
+    height: 400px;
+    width: 400px;
     background-color: white;
     display: flex;
     justify-content: center;
